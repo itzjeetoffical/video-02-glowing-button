@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #0b0d12;
+}
+
+.btn {
+    position: relative;
+    padding: 16px 44px;
+    border-radius: 999px;
+    background: #1a1c24;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.btn span {
+    margin-left: 10px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: linear-gradient(30deg,#00eaff, #7c7cff, #ff4ecd, #00eaff);
+    opacity: 0;
+    filter: blur(18px);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:hover::before {
+    opacity: 1;
+    animation: glowMove 2.5s linear infinite;
+}
+
+.btn:hover span {
+    transform: translateX(6px);
+}
+
+.btn:active {
+    transform: translateY(1px) scale(0.98);
+}
+@keyframes glowMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
