@@ -29,7 +29,7 @@ Hover animations
 Glow effects
 
 🔗 Live Demo
-link
+link - https://itzjeetoffical.github.io/video-02-glowing-button/
 
 📸 Preview
 
